@@ -14,6 +14,24 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 mkdir -p data/gtfs data/osm web/vendor
 
+# A downloaded extract is only accepted if it PARSES and carries a plausible
+# number of elements. `grep -q '"elements"'` — the guard this family used
+# everywhere — passes on a truncated response too: Brașov's roads arrived as a
+# 65 kB fragment that still contained the string, was taken for complete, and
+# silently skipped the city (16.08.2026).
+# The minimum differs by extract: a road network runs to tens of thousands of
+# ways, a city tram network to a few hundred (Cluj's is 132), so the caller
+# passes its own floor rather than sharing one.
+ok_json () { # $1=file  $2=minimum element count
+  python3 - "$1" "$2" <<'PYEOF' 2>/dev/null
+import json, sys
+try:
+    sys.exit(0 if len(json.load(open(sys.argv[1])).get("elements", [])) >= int(sys.argv[2]) else 1)
+except Exception:
+    sys.exit(1)
+PYEOF
+}
+
 # The metropolitan lines reach far past the city: Cruceni in the south
 # (45.47 N) and Seceani/Bărăteaz in the north (45.98 N). Stops span
 # 45.472–45.977 N / 20.861–21.421 E.
@@ -41,7 +59,7 @@ if [ ! -f data/osm/timisoara.json ]; then
             "https://overpass.kumi.systems/api/interpreter"; do
     echo "-- $EP"
     if curl -fsS --max-time 900 -o data/osm/timisoara.json --data-urlencode "data=$QR" "$EP" \
-       && grep -q '"elements"' data/osm/timisoara.json; then
+       && ok_json "data/osm/timisoara.json" 2000; then
       ok=1; break
     fi
     sleep 5
@@ -63,7 +81,7 @@ if [ ! -f data/osm/timisoara-rail.json ]; then
             "https://overpass.kumi.systems/api/interpreter"; do
     echo "-- $EP"
     if curl -fsS --max-time 300 -o data/osm/timisoara-rail.json --data-urlencode "data=$QT" "$EP" \
-       && grep -q '"elements"' data/osm/timisoara-rail.json; then
+       && ok_json "data/osm/timisoara-rail.json" 40; then
       ok=1; break
     fi
     sleep 5
