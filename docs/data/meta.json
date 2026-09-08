@@ -42,104 +42,6 @@
   ],
   "lines": [
     {
-      "line": "5b",
-      "mode": "bus",
-      "color": "#0059a9",
-      "dirs": [
-        {
-          "dir": "0",
-          "headsign": "Ronaț",
-          "variants": 1,
-          "tripCount": 116,
-          "stops": 7,
-          "lengthKm": 3.34,
-          "stats": {
-            "observations": 171,
-            "matched": 171,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 2.9064726818631472,
-            "roundaboutSegs": 24,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        },
-        {
-          "dir": "1",
-          "headsign": "Regele Carol",
-          "variants": 1,
-          "tripCount": 116,
-          "stops": 10,
-          "lengthKm": 6.39,
-          "stats": {
-            "observations": 317,
-            "matched": 317,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 1.7892399138376252,
-            "roundaboutSegs": 0,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ]
-    },
-    {
-      "line": "5c",
-      "mode": "bus",
-      "color": "#0059a9",
-      "dirs": [
-        {
-          "dir": "0",
-          "headsign": "Gara de Est",
-          "variants": 1,
-          "tripCount": 206,
-          "stops": 24,
-          "lengthKm": 9.31,
-          "stats": {
-            "observations": 446,
-            "matched": 446,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 2.7223240055437157,
-            "roundaboutSegs": 22,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        },
-        {
-          "dir": "1",
-          "headsign": "Ronaț",
-          "variants": 1,
-          "tripCount": 206,
-          "stops": 25,
-          "lengthKm": 9.42,
-          "stats": {
-            "observations": 465,
-            "matched": 465,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 3.9619848849600605,
-            "roundaboutSegs": 42,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ]
-    },
-    {
       "line": "11",
       "mode": "bus",
       "color": "#149a3f",
@@ -182,55 +84,6 @@
             "rawMeters": 0,
             "meanError": 3.48421183334772,
             "roundaboutSegs": 34,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ]
-    },
-    {
-      "line": "13",
-      "mode": "bus",
-      "color": "#0059a9",
-      "dirs": [
-        {
-          "dir": "0",
-          "headsign": "Pasaj C.F. Mehala",
-          "variants": 1,
-          "tripCount": 146,
-          "stops": 10,
-          "lengthKm": 4.06,
-          "stats": {
-            "observations": 203,
-            "matched": 203,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 3.840301450949621,
-            "roundaboutSegs": 13,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        },
-        {
-          "dir": "1",
-          "headsign": "Piața 700 (Spitalul Militar)",
-          "variants": 1,
-          "tripCount": 146,
-          "stops": 11,
-          "lengthKm": 4.65,
-          "stats": {
-            "observations": 233,
-            "matched": 233,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 2.446414513567117,
-            "roundaboutSegs": 10,
             "extStart": 0,
             "extEnd": 0
           }
@@ -476,6 +329,251 @@
             "rawMeters": 0,
             "meanError": 4.112061198940445,
             "roundaboutSegs": 11,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ]
+    },
+    {
+      "line": "M11",
+      "mode": "bus",
+      "color": "#149a3f",
+      "dirs": [
+        {
+          "dir": "0",
+          "headsign": "Ghiroda (Ialomiței)",
+          "variants": 1,
+          "tripCount": 74,
+          "stops": 20,
+          "lengthKm": 10.05,
+          "stats": {
+            "observations": 469,
+            "matched": 469,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 2.5684604373610287,
+            "roundaboutSegs": 39,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        },
+        {
+          "dir": "1",
+          "headsign": "Gheorghe Barițiu",
+          "variants": 1,
+          "tripCount": 74,
+          "stops": 26,
+          "lengthKm": 10.14,
+          "stats": {
+            "observations": 491,
+            "matched": 491,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 2.2199610457089722,
+            "roundaboutSegs": 34,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ]
+    },
+    {
+      "line": "M14",
+      "mode": "bus",
+      "color": "#149a3f",
+      "dirs": [
+        {
+          "dir": "0",
+          "headsign": "Dumbrăvița (Girație centură)",
+          "variants": 1,
+          "tripCount": 88,
+          "stops": 20,
+          "lengthKm": 9.94,
+          "stats": {
+            "observations": 496,
+            "matched": 496,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 2.3066868090359107,
+            "roundaboutSegs": 105,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        },
+        {
+          "dir": "1",
+          "headsign": "Gheorghe Barițiu",
+          "variants": 1,
+          "tripCount": 88,
+          "stops": 21,
+          "lengthKm": 10.03,
+          "stats": {
+            "observations": 500,
+            "matched": 500,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 2.3634278205093593,
+            "roundaboutSegs": 43,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ]
+    },
+    {
+      "line": "5b",
+      "mode": "bus",
+      "color": "#0059a9",
+      "dirs": [
+        {
+          "dir": "0",
+          "headsign": "Ronaț",
+          "variants": 1,
+          "tripCount": 116,
+          "stops": 7,
+          "lengthKm": 3.34,
+          "stats": {
+            "observations": 171,
+            "matched": 171,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 2.9064726818631472,
+            "roundaboutSegs": 24,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        },
+        {
+          "dir": "1",
+          "headsign": "Regele Carol",
+          "variants": 1,
+          "tripCount": 116,
+          "stops": 10,
+          "lengthKm": 6.39,
+          "stats": {
+            "observations": 317,
+            "matched": 317,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 1.7892399138376252,
+            "roundaboutSegs": 0,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ]
+    },
+    {
+      "line": "5c",
+      "mode": "bus",
+      "color": "#0059a9",
+      "dirs": [
+        {
+          "dir": "0",
+          "headsign": "Gara de Est",
+          "variants": 1,
+          "tripCount": 206,
+          "stops": 24,
+          "lengthKm": 9.31,
+          "stats": {
+            "observations": 446,
+            "matched": 446,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 2.7223240055437157,
+            "roundaboutSegs": 22,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        },
+        {
+          "dir": "1",
+          "headsign": "Ronaț",
+          "variants": 1,
+          "tripCount": 206,
+          "stops": 25,
+          "lengthKm": 9.42,
+          "stats": {
+            "observations": 465,
+            "matched": 465,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 3.9619848849600605,
+            "roundaboutSegs": 42,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        }
+      ]
+    },
+    {
+      "line": "13",
+      "mode": "bus",
+      "color": "#0059a9",
+      "dirs": [
+        {
+          "dir": "0",
+          "headsign": "Pasaj C.F. Mehala",
+          "variants": 1,
+          "tripCount": 146,
+          "stops": 10,
+          "lengthKm": 4.06,
+          "stats": {
+            "observations": 203,
+            "matched": 203,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 3.840301450949621,
+            "roundaboutSegs": 13,
+            "extStart": 0,
+            "extEnd": 0
+          }
+        },
+        {
+          "dir": "1",
+          "headsign": "Piața 700 (Spitalul Militar)",
+          "variants": 1,
+          "tripCount": 146,
+          "stops": 11,
+          "lengthKm": 4.65,
+          "stats": {
+            "observations": 233,
+            "matched": 233,
+            "noCandidates": 0,
+            "viterbiBreaks": 0,
+            "bridged": 0,
+            "rawStretchCount": 0,
+            "rawMeters": 0,
+            "meanError": 2.446414513567117,
+            "roundaboutSegs": 10,
             "extStart": 0,
             "extEnd": 0
           }
@@ -1309,104 +1407,6 @@
             "rawMeters": 0,
             "meanError": 2.5331424837091,
             "roundaboutSegs": 42,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ]
-    },
-    {
-      "line": "M11",
-      "mode": "bus",
-      "color": "#149a3f",
-      "dirs": [
-        {
-          "dir": "0",
-          "headsign": "Ghiroda (Ialomiței)",
-          "variants": 1,
-          "tripCount": 74,
-          "stops": 20,
-          "lengthKm": 10.05,
-          "stats": {
-            "observations": 469,
-            "matched": 469,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 2.5684604373610287,
-            "roundaboutSegs": 39,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        },
-        {
-          "dir": "1",
-          "headsign": "Gheorghe Barițiu",
-          "variants": 1,
-          "tripCount": 74,
-          "stops": 26,
-          "lengthKm": 10.14,
-          "stats": {
-            "observations": 491,
-            "matched": 491,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 2.2199610457089722,
-            "roundaboutSegs": 34,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        }
-      ]
-    },
-    {
-      "line": "M14",
-      "mode": "bus",
-      "color": "#149a3f",
-      "dirs": [
-        {
-          "dir": "0",
-          "headsign": "Dumbrăvița (Girație centură)",
-          "variants": 1,
-          "tripCount": 88,
-          "stops": 20,
-          "lengthKm": 9.94,
-          "stats": {
-            "observations": 496,
-            "matched": 496,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 2.3066868090359107,
-            "roundaboutSegs": 105,
-            "extStart": 0,
-            "extEnd": 0
-          }
-        },
-        {
-          "dir": "1",
-          "headsign": "Gheorghe Barițiu",
-          "variants": 1,
-          "tripCount": 88,
-          "stops": 21,
-          "lengthKm": 10.03,
-          "stats": {
-            "observations": 500,
-            "matched": 500,
-            "noCandidates": 0,
-            "viterbiBreaks": 0,
-            "bridged": 0,
-            "rawStretchCount": 0,
-            "rawMeters": 0,
-            "meanError": 2.3634278205093593,
-            "roundaboutSegs": 43,
             "extStart": 0,
             "extEnd": 0
           }
