@@ -55,3 +55,7 @@ map at http://localhost:8142.
 Data: Societatea Metropolitană de Transport Timișoara (SMTT) / Societatea de
 Transport Public Timișoara (STPT) · base map © OpenFreeMap / OpenMapTiles /
 OpenStreetMap contributors.
+
+## 17.09.2026 — requested fixes
+
+- **Diacritics as in Bucharest.** Stop names and headsigns go through the Romanian dictionary (`lib/romanian.mjs`, word forms from `data/osm/timisoara-names.json` cut from the Geofabrik romania extract). The SMTT feed already writes almost every name properly; Gara, Prefectura and Bucla keep their article.

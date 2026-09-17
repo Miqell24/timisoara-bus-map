@@ -18,6 +18,7 @@ import { iterCsv, readCsv } from './lib/csv.mjs';
 import { makeProj, resample, nearestOnPolyline, polylineLength } from './lib/geo.mjs';
 import { buildGraph, railKind } from './lib/graph.mjs';
 import { matchShape, extendToStops } from './lib/hmm.mjs';
+import { buildNameDict, restoreDiacritics, commaBelow } from './lib/romanian.mjs';
 
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -167,6 +168,24 @@ if (tramAll || tramSel.length) MODES.push({
 // shapes, the stop sequence IS the matching observation, so the whole line gets
 // dragged into a detour. Empty until a pole is found to be wrong.
 const STOP_FIX = {};
+
+// Stop names and headsigns with their diacritics (user 17.09.2026: "as in
+// Bucharest"): a dictionary of properly written word forms from the road
+// extract and the named OSM objects around the city (data/osm/timisoara-names.json,
+// cut from the Geofabrik romania extract), applied word by word — see
+// lib/romanian.mjs. Three nouns a stop names WITH the article stay as the feed
+// writes them: Gara (the station), Prefectura, Bucla (the loop) — OSM uses them
+// indefinite (gară, prefectură, buclă) inside longer names.
+const nameDict = (() => {
+  const docs = [];
+  for (const f of ['data/osm/timisoara.json', 'data/osm/timisoara-names.json']) {
+    try { docs.push(JSON.parse(readFileSync(join(ROOT, f), 'utf8'))); } catch { /* missing extract: skip */ }
+  }
+  const d = buildNameDict(docs);
+  for (const w of ['gara', 'prefectura', 'bucla']) d.delete(w);
+  return d;
+})();
+const roName = (s) => restoreDiacritics(commaBelow(s || ''), nameDict);
 
 // A matched path that steps off the corridor and comes straight back leaves a
 // stub hanging off the network: the reader sees a tail pointing at nothing
@@ -403,7 +422,7 @@ async function processMode(cfg) {
         for (const [shapeId, e] of m) if (!best || e.count > best.e.count) best = { shapeId, e };
         feedReps.push({
           line: L, dir, shapeId: best.shapeId, feedTag: feed.tag,
-          headsign: best.e.trips[0]?.headsign || '',
+          headsign: roName(best.e.trips[0]?.headsign || ''),
           candTrips: new Set(best.e.trips.map((x) => x.trip_id)),
           variants: m.size, tripCount: best.e.count,
         });
@@ -439,6 +458,7 @@ async function processMode(cfg) {
       // ("Dâmbovița (Ion Barac)"), so titleCase stays off and no case
       // dictionary runs here.
       if (feed.titleCase) name = titleCase(name);
+      name = roName(name);
       const fix = STOP_FIX[feed.tag + ':' + s.stop_id];
       stopsById.set(feed.tag + ':' + s.stop_id, {
         name,
